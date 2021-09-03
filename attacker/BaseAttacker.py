@@ -56,7 +56,7 @@ class BaseAttacker(object):
 
         self._attack(x=x_true, y=y_true, *args, **kwargs)
     
-    def set_bound(self, x, epsilon, norm):
+    def set_bound(self, x, norm):
         if norm=="Linf":
             self.lower = torch.clamp(
                 input=x - self.epsilon * torch.ones_like(x),
