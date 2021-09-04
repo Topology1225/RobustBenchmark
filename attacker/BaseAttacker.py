@@ -44,7 +44,7 @@ class BaseAttacker(object):
         self.device = device
 
     def attack(self, x_true, y_true, *args, **kwargs):
-        self.set_bound(x_true, self.epsilon, self.norm)
+        self.set_bound(x_true, self.norm)
 
         #Linf only
         self.projection = get_projection(
